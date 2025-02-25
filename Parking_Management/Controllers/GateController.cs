@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Parking_Management.Dto;
 using Parking_Management.Models;
 using System.Linq;
 
@@ -34,6 +35,7 @@ namespace Parking_Management.Controllers
 
             return gate;
         } 
+
         [HttpPost]
         public async Task<ActionResult<Gate>> CreateGate([FromBody] GateOnly gateOnly)
         {
@@ -46,12 +48,10 @@ namespace Parking_Management.Controllers
             _context.Gates.Add(gate);
             await _context.SaveChangesAsync();
 
-            return Ok();
+            return CreatedAtAction(nameof(GetGateById), new { id = gate.Id }, gate);
         }
-        
 
-
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateGate(int id, [FromBody] GateOnly gate)
         {
             if (id != gate.Id)
@@ -72,7 +72,7 @@ namespace Parking_Management.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGate(int id)
         {
             var gate = await _context.Gates.FirstOrDefaultAsync(i => i.Id == id);

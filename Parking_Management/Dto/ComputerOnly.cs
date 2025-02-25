@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Parking_Management.Models
+namespace Parking_Management.Dto
 {
-    public class GateOnly
+    public class ComputerOnly
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -12,8 +12,14 @@ namespace Parking_Management.Models
 
         public string Name { get; set; }
 
+        public string IpAddress { get; set; } = null!;
+
+        public int GateId { get; set; }
+
         public DateTime CreatedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
+
+
     }
 }
