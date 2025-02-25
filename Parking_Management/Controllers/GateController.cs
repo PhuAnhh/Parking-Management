@@ -39,9 +39,8 @@ namespace Parking_Management.Controllers
         {
             var gate = new Gate
             {
-                Id = gateOnly.Id,
                 Name = gateOnly.Name,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
             };
 
             _context.Gates.Add(gate);

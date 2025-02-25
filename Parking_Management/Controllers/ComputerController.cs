@@ -39,11 +39,10 @@ public class ComputerController : ControllerBase
     {
         var computer = new Computer
         {
-            Id = computerOnly.Id,
             Name = computerOnly.Name,
             IpAddress = computerOnly.IpAddress,
             GateId = computerOnly.GateId,
-            CreatedAt = computerOnly.CreatedAt,
+            CreatedAt = DateTime.UtcNow,
         };
 
         _context.Computers.Add(computer);

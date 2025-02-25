@@ -170,3 +170,4 @@ C:\Users\phanp\source\repos\Parking_Management\Parking_Management\obj\Debug\net8
 C:\Users\phanp\source\repos\Parking_Management\Parking_Management\obj\Debug\net8.0\Parking_Management.genruntimeconfig.cache
 C:\Users\phanp\source\repos\Parking_Management\Parking_Management\obj\Debug\net8.0\ref\Parking_Management.dll
 C:\Users\phanp\source\repos\Parking_Management\Parking_Management\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\phanp\source\repos\Parking_Management\Parking_Management\obj\Debug\net8.0\Parking_Management.sourcelink.json

@@ -41,13 +41,11 @@ public partial class ParkingManagementContext : DbContext
     {
         modelBuilder.Entity<Camera>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cameras__3213E83F96EC8BF0");
+            entity.HasKey(e => e.Id).HasName("PK__cameras__3213E83FDB0CEB70");
 
             entity.ToTable("cameras");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ComputerId).HasColumnName("computer_id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -85,7 +83,7 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Computer).WithMany(p => p.Cameras)
                 .HasForeignKey(d => d.ComputerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__cameras__compute__60A75C0F");
+                .HasConstraintName("FK__cameras__compute__22751F6C");
         });
 
         modelBuilder.Entity<Card>(entity =>
@@ -149,13 +147,11 @@ public partial class ParkingManagementContext : DbContext
 
         modelBuilder.Entity<Computer>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__computer__3213E83FB3599ED7");
+            entity.HasKey(e => e.Id).HasName("PK__computer__3213E83FF0007F28");
 
             entity.ToTable("computers");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
@@ -177,18 +173,16 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Gate).WithMany(p => p.Computers)
                 .HasForeignKey(d => d.GateId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__computers__gate___5AEE82B9");
+                .HasConstraintName("FK__computers__gate___1CBC4616");
         });
 
         modelBuilder.Entity<ControlUnit>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__control___3213E83FF7D26C55");
+            entity.HasKey(e => e.Id).HasName("PK__control___3213E83FEAB6B0EA");
 
             entity.ToTable("control_units");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ComputerId).HasColumnName("computer_id");
             entity.Property(e => e.ConnectionProtocol)
                 .HasMaxLength(50)
@@ -222,7 +216,7 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Computer).WithMany(p => p.ControlUnits)
                 .HasForeignKey(d => d.ComputerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__control_u__compu__6754599E");
+                .HasConstraintName("FK__control_u__compu__29221CFB");
         });
 
         modelBuilder.Entity<Customer>(entity =>
@@ -352,38 +346,34 @@ public partial class ParkingManagementContext : DbContext
                 .HasConstraintName("FK__exit_logs__entry__52593CB8");
         });
 
-            modelBuilder.Entity<Gate>(entity =>
-            {
-                entity.HasKey(e => e.Id).HasName("PK__gates__3213E83FDF70C7E8");
+        modelBuilder.Entity<Gate>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__gates__3213E83FE0E99CC4");
 
-                entity.ToTable("gates");
+            entity.ToTable("gates");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id");
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("(getdate())")
-                    .HasColumnType("datetime")
-                    .HasColumnName("created_at");
-                entity.Property(e => e.Name)
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("name");
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("(getdate())")
-                    .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
-            });
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.Name)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("name");
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("updated_at");
+        });
 
         modelBuilder.Entity<Lane>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__lanes__3213E83FF904D3C8");
+            entity.HasKey(e => e.Id).HasName("PK__lanes__3213E83F889E2FAE");
 
             entity.ToTable("lanes");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ComputerId).HasColumnName("computer_id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -405,12 +395,12 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Computer).WithMany(p => p.Lanes)
                 .HasForeignKey(d => d.ComputerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__lanes__computer___6D0D32F4");
+                .HasConstraintName("FK__lanes__computer___2EDAF651");
         });
 
         modelBuilder.Entity<LaneCamera>(entity =>
         {
-            entity.HasKey(e => new { e.LaneId, e.CameraId }).HasName("PK__lane_cam__ADA8883503AF3858");
+            entity.HasKey(e => new { e.LaneId, e.CameraId }).HasName("PK__lane_cam__ADA88835DE54533A");
 
             entity.ToTable("lane_cameras");
 
@@ -437,17 +427,17 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Camera).WithMany(p => p.LaneCameras)
                 .HasForeignKey(d => d.CameraId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__lane_came__camer__7A672E12");
+                .HasConstraintName("FK__lane_came__camer__3C34F16F");
 
             entity.HasOne(d => d.Lane).WithMany(p => p.LaneCameras)
                 .HasForeignKey(d => d.LaneId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__lane_came__lane___797309D9");
+                .HasConstraintName("FK__lane_came__lane___3B40CD36");
         });
 
         modelBuilder.Entity<LaneController>(entity =>
         {
-            entity.HasKey(e => new { e.LaneId, e.ControlUnitId }).HasName("PK__lane_con__A795E88ABA8092BC");
+            entity.HasKey(e => new { e.LaneId, e.ControlUnitId }).HasName("PK__lane_con__A795E88A54769313");
 
             entity.ToTable("lane_controllers");
 
@@ -480,23 +470,21 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.ControlUnit).WithMany(p => p.LaneControllers)
                 .HasForeignKey(d => d.ControlUnitId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__lane_cont__contr__02FC7413");
+                .HasConstraintName("FK__lane_cont__contr__44CA3770");
 
             entity.HasOne(d => d.Lane).WithMany(p => p.LaneControllers)
                 .HasForeignKey(d => d.LaneId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__lane_cont__lane___02084FDA");
+                .HasConstraintName("FK__lane_cont__lane___43D61337");
         });
 
         modelBuilder.Entity<Led>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__led__3213E83F1987CDAF");
+            entity.HasKey(e => e.Id).HasName("PK__led__3213E83F96F277AA");
 
             entity.ToTable("led");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ComputerId).HasColumnName("computer_id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -518,7 +506,7 @@ public partial class ParkingManagementContext : DbContext
             entity.HasOne(d => d.Computer).WithMany(p => p.Leds)
                 .HasForeignKey(d => d.ComputerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__led__computer_id__72C60C4A");
+                .HasConstraintName("FK__led__computer_id__3493CFA7");
         });
 
         OnModelCreatingPartial(modelBuilder);
