@@ -74,7 +74,7 @@ public class ComputerController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteComputer(int id)
     {
         var computer = await _context.Computers.FirstOrDefaultAsync(i => i.Id == id);

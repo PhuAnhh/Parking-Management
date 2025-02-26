@@ -156,22 +156,6 @@
   },
   {
     "ContainingType": "ComputerController",
-    "Method": "DeleteComputer",
-    "RelativePath": "api/Computer",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ComputerController",
     "Method": "GetComputer",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "GET",
@@ -212,6 +196,22 @@
       {
         "Name": "computer",
         "Type": "Parking_Management.Dto.ComputerOnly",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComputerController",
+    "Method": "DeleteComputer",
+    "RelativePath": "api/Computer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -532,6 +532,115 @@
     "ContainingType": "Parking_Management.Controllers.LaneController",
     "Method": "Delete",
     "RelativePath": "api/Lane/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parking_Management.Controllers.LedController",
+    "Method": "GetAll",
+    "RelativePath": "api/Led",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Led, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Parking_Management.Controllers.LedController",
+    "Method": "CreateGate",
+    "RelativePath": "api/Led",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ledOnly",
+        "Type": "Parking_Management.Models.LedOnly",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Models.Led",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Parking_Management.Controllers.LedController",
+    "Method": "GetById",
+    "RelativePath": "api/Led/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Models.Led",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Parking_Management.Controllers.LedController",
+    "Method": "Update",
+    "RelativePath": "api/Led/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "led",
+        "Type": "Parking_Management.Models.LedOnly",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parking_Management.Controllers.LedController",
+    "Method": "Delete",
+    "RelativePath": "api/Led/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
