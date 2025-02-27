@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Domain.Entities;
 
-public partial class EntryLog
+public partial class ExitLog
 {
     public int Id { get; set; }
 
     public int CardId { get; set; }
 
+    public int EntryId { get; set; }
+
     public string PlateNumber { get; set; } = null!;
 
     public string VehicleType { get; set; } = null!;
 
-    public DateTime? EntryTime { get; set; }
+    public DateTime? ExitTime { get; set; }
 
-    public string EntryLane { get; set; } = null!;
+    public string ExitLane { get; set; } = null!;
 
     public string ImageUrl { get; set; } = null!;
 
@@ -25,5 +27,5 @@ public partial class EntryLog
 
     public virtual Card Card { get; set; } = null!;
 
-    public virtual ICollection<ExitLog> ExitLogs { get; set; } = new List<ExitLog>();
+    public virtual EntryLog Entry { get; set; } = null!;
 }

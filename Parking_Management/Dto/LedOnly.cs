@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Dto;
 
 public partial class LedOnly
 {

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Parking_Management.Domain.Entities;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Domain.Entities;
 
 public partial class ParkingManagementContext : DbContext
 {

@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Camera, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.Camera, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Camera",
+        "Type": "Parking_Management.Domain.Entities.Camera",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Camera",
+        "Type": "Parking_Management.Domain.Entities.Camera",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -118,7 +118,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Computer, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.Computer, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -144,7 +144,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Computer",
+        "Type": "Parking_Management.Domain.Entities.Computer",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -170,7 +170,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Computer",
+        "Type": "Parking_Management.Domain.Entities.Computer",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -227,7 +227,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.ControlUnit, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.ControlUnit, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -247,13 +247,13 @@
     "Parameters": [
       {
         "Name": "controlUnitOnly",
-        "Type": "Parking_Management.Models.ControlUnitOnly",
+        "Type": "Parking_Management.Dto.ControlUnitOnly",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.ControlUnit",
+        "Type": "Parking_Management.Domain.Entities.ControlUnit",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -279,7 +279,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.ControlUnit",
+        "Type": "Parking_Management.Domain.Entities.ControlUnit",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -304,7 +304,7 @@
       },
       {
         "Name": "controlUnitOnly",
-        "Type": "Parking_Management.Models.ControlUnitOnly",
+        "Type": "Parking_Management.Dto.ControlUnitOnly",
         "IsRequired": true
       }
     ],
@@ -328,7 +328,7 @@
   },
   {
     "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "GetAllGates",
+    "Method": "GetAll",
     "RelativePath": "api/Gate",
     "HttpMethod": "GET",
     "IsController": true,
@@ -336,7 +336,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Gate, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.Gate, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -348,7 +348,7 @@
   },
   {
     "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "CreateGate",
+    "Method": "Create",
     "RelativePath": "api/Gate",
     "HttpMethod": "POST",
     "IsController": true,
@@ -362,7 +362,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Gate",
+        "Type": "Parking_Management.Domain.Entities.Gate",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -374,7 +374,7 @@
   },
   {
     "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "GetGateById",
+    "Method": "GetById",
     "RelativePath": "api/Gate/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -388,7 +388,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Gate",
+        "Type": "Parking_Management.Domain.Entities.Gate",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -412,7 +412,7 @@
         "IsRequired": true
       },
       {
-        "Name": "gate",
+        "Name": "gateOnly",
         "Type": "Parking_Management.Dto.GateOnly",
         "IsRequired": true
       }
@@ -421,7 +421,7 @@
   },
   {
     "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "DeleteGate",
+    "Method": "Delete",
     "RelativePath": "api/Gate/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -445,7 +445,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Lane, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.Lane, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -465,13 +465,13 @@
     "Parameters": [
       {
         "Name": "laneOnly",
-        "Type": "Parking_Management.Models.LaneOnly",
+        "Type": "Parking_Management.Dto.LaneOnly",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Lane",
+        "Type": "Parking_Management.Domain.Entities.Lane",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -497,7 +497,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Lane",
+        "Type": "Parking_Management.Domain.Entities.Lane",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -522,7 +522,7 @@
       },
       {
         "Name": "lane",
-        "Type": "Parking_Management.Models.LaneOnly",
+        "Type": "Parking_Management.Dto.LaneOnly",
         "IsRequired": true
       }
     ],
@@ -554,7 +554,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Led, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Domain.Entities.Led, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -574,13 +574,13 @@
     "Parameters": [
       {
         "Name": "ledOnly",
-        "Type": "Parking_Management.Models.LedOnly",
+        "Type": "Parking_Management.Dto.LedOnly",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Led",
+        "Type": "Parking_Management.Domain.Entities.Led",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -606,7 +606,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Led",
+        "Type": "Parking_Management.Domain.Entities.Led",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -631,7 +631,7 @@
       },
       {
         "Name": "led",
-        "Type": "Parking_Management.Models.LedOnly",
+        "Type": "Parking_Management.Dto.LedOnly",
         "IsRequired": true
       }
     ],

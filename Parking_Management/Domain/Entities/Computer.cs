@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Domain.Entities;
 
 public partial class Computer
 {

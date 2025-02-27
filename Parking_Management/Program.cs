@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Parking_Management.Models;
+using Parking_Management.Business.Repositories;
+using Parking_Management.Business.Services;
+using Parking_Management.Domain.Entities;
+using Parking_Management.Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IGateRepository, GateRepository>();
+builder.Services.AddScoped<IGateService, GateService>();
+
 
 var app = builder.Build();
 

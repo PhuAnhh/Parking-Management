@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Dto;
 
 public partial class ControlUnitOnly
 {

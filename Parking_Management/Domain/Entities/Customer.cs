@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Parking_Management.Models;
+namespace Parking_Management.Domain.Entities;
 
-public partial class CardGroup
+public partial class Customer
 {
     public int Id { get; set; }
 
     public string Name { get; set; } = null!;
+
+    public string Phone { get; set; } = null!;
+
+    public string? Room { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
