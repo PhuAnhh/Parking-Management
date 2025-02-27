@@ -1,89 +1,66 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Domain.Entities;
-using System.Collections.Generic;
+using Parking_Management.Business.Repositories;
+using Parking_Management.Business.Services;
 using System.Linq;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-[Route("api/[controller]")]
-[ApiController]
-public class ComputerController : ControllerBase
+namespace Parking_Management.Controllers
 {
-    private readonly ParkingManagementContext _context;
-
-    public ComputerController(ParkingManagementContext context)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ComputerController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly IComputerService _computerService;
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Computer>>> GetComputers()
-    {
-        return await _context.Computers.ToListAsync();
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Computer>> GetComputer(int id)
-    {
-        var computer = await _context.Computers.FirstOrDefaultAsync(i => i.Id == id);
-        if (computer == null)
+        public ComputerController(IComputerService computerService)
         {
-            return NotFound();
-        }
-        return computer;
-    }
-
-    [HttpPost]
-    public async Task<ActionResult<Computer>> PostComputer(ComputerOnly computerOnly)
-    {
-        var computer = new Computer
-        {
-            Name = computerOnly.Name,
-            IpAddress = computerOnly.IpAddress,
-            GateId = computerOnly.GateId,
-            CreatedAt = DateTime.UtcNow,
-        };
-
-        _context.Computers.Add(computer);
-        await _context.SaveChangesAsync();
-
-        return Ok(computer);
-    }
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutComputer(int id, ComputerOnly computer)
-    {
-        if (id != computer.Id)
-        {
-            return BadRequest("ID not found");
-        }
-        var existingComputer = await _context.Computers.FirstOrDefaultAsync(i => i.Id == id);
-        if (existingComputer == null)
-        {
-            return NotFound("Computer not found");
+            _computerService = computerService;
         }
 
-        existingComputer.Name = computer.Name;
-        existingComputer.IpAddress = computer.IpAddress;
-        existingComputer.GateId = computer.GateId;
-        existingComputer.UpdatedAt = DateTime.UtcNow;
-
-        await _context.SaveChangesAsync();
-        return NoContent();
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteComputer(int id)
-    {
-        var computer = await _context.Computers.FirstOrDefaultAsync(i => i.Id == id);
-        if (computer == null)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Computer>>> GetAll()
         {
-            return NotFound();
+            return Ok(await _computerService.GetAll());
         }
-        _context.Computers.Remove(computer);
-        await _context.SaveChangesAsync();
-        return NoContent();
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Computer>> GetById(int id)
+        {
+            var computer = await _computerService.GetById(id);
+            if (computer == null)
+            {
+                return NotFound("Computer not found");
+            }
+            return Ok(computer);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Computer>> Create(ComputerOnly computerOnly)
+        {
+            var computer = _computerService.Add(computerOnly);
+            return CreatedAtAction(nameof(GetById), new {id = computer.Id}, computer);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id,[FromBody] ComputerOnly computerOnly)
+        {
+            await _computerService.Update(id, computerOnly);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var computer = await _computerService.GetById(id);
+            if (computer == null)
+            {
+                return NotFound("Computer not found");
+            }
+            await _computerService.Delete(id);
+            return NoContent();
+        }
     }
 }

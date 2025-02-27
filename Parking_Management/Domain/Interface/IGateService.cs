@@ -1,7 +1,7 @@
 ﻿using Parking_Management.Dto;
 using Parking_Management.Domain.Entities;
 
-namespace Parking_Management.Domain.Interfaces
+namespace Parking_Management.Domain.Interface
 {
     public interface IGateService
     {

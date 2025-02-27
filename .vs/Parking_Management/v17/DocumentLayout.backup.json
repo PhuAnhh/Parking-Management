@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\gatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\gatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\business\\ledrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\business\\ledrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\business\\ledservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\business\\ledservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\business\\gaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,124 +23,16 @@
       "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\business\\gateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\interface\\iledrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\interface\\iledrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\interface\\iledservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\interface\\iledservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\lanecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\lanecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\interface\\igateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\interface\\igateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\gateonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\gateonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\interface\\igaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\interface\\igaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\parkingmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\parkingmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\parking_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\parking_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\cameraonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\cameraonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\computercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\computercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\controlunitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\controlunitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\presentation\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\presentation\\ledcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\controlunitonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\controlunitonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\laneonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\laneonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\ledonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\ledonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\dto\\computeronly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\dto\\computeronly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\lanecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\lanecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\lanecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\lanecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\lane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\lane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\exitlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\exitlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\entrylog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\entrylog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\controlunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\controlunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\cardgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\cardgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|c:\\users\\phanp\\onedrive\\documents\\github\\parking-management\\parking_management\\domain\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D82611A-B545-42DC-91C1-DDCA849E2602}|Parking_Management\\Parking_Management.csproj|solutionrelative:parking_management\\domain\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -142,439 +42,114 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LedController.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LedController.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\LedController.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LedController.cs",
+              "RelativeToolTip": "Parking_Management\\Presentation\\LedController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:19:50.565Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GateService.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateService.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Business\\GateService.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateService.cs",
-              "RelativeToolTip": "Parking_Management\\Business\\GateService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T03:01:46.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GateController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\GateController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\GateController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\GateController.cs*",
-              "RelativeToolTip": "Parking_Management\\Presentation\\GateController.cs*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAuwD0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:48:23.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Program.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Program.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Program.cs",
-              "RelativeToolTip": "Parking_Management\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T01:34:15.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GateRepository.cs",
               "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateRepository.cs",
               "RelativeDocumentMoniker": "Parking_Management\\Business\\GateRepository.cs",
               "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateRepository.cs",
               "RelativeToolTip": "Parking_Management\\Business\\GateRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T03:14:18.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IGateService.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\IGateService.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Interface\\IGateService.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\IGateService.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Interface\\IGateService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:59:43.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Gate.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Gate.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Gate.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Gate.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Gate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T01:42:14.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GateOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\GateOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\GateOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\GateOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\GateOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:38:29.943Z",
+              "WhenOpened": "2025-02-27T08:14:54.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LaneController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LaneController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\LaneController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LaneController.cs",
-              "RelativeToolTip": "Parking_Management\\Presentation\\LaneController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Title": "GateService.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateService.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Business\\GateService.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\GateService.cs",
+              "RelativeToolTip": "Parking_Management\\Business\\GateService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:32:49.309Z",
+              "WhenOpened": "2025-02-27T08:14:49.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Parking_Management",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj",
-              "RelativeDocumentMoniker": "Parking_Management\\Parking_Management.csproj",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj",
-              "RelativeToolTip": "Parking_Management\\Parking_Management.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-27T01:41:04.646Z",
+              "DocumentIndex": 1,
+              "Title": "LedRepository.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\LedRepository.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Business\\LedRepository.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\LedRepository.cs",
+              "RelativeToolTip": "Parking_Management\\Business\\LedRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:14:30.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LedService.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\LedService.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Business\\LedService.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Business\\LedService.cs",
+              "RelativeToolTip": "Parking_Management\\Business\\LedService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA3wDYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:14:17.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ILedRepository.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\ILedRepository.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Interface\\ILedRepository.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\ILedRepository.cs",
+              "RelativeToolTip": "Parking_Management\\Domain\\Interface\\ILedRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:12:48.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ILedService.cs",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\ILedService.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Interface\\ILedService.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\ILedService.cs",
+              "RelativeToolTip": "Parking_Management\\Domain\\Interface\\ILedService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:12:39.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IGateRepository.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\IGateRepository.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Interface\\IGateRepository.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Interface\\IGateRepository.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Interface\\IGateRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:57:30.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\CameraController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\CameraController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\CameraController.cs",
-              "RelativeToolTip": "Parking_Management\\Presentation\\CameraController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:26:32.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ParkingManagementContext.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ParkingManagementContext.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\ParkingManagementContext.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ParkingManagementContext.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\ParkingManagementContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T01:37:50.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CameraOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\CameraOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\CameraOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\CameraOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\CameraOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:48.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ComputerController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\ComputerController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\ComputerController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\ComputerController.cs",
-              "RelativeToolTip": "Parking_Management\\Presentation\\ComputerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:46:05.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ControlUnitController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\ControlUnitController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\ControlUnitController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\ControlUnitController.cs",
-              "RelativeToolTip": "Parking_Management\\Presentation\\ControlUnitController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:46:22.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Camera.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Camera.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Camera.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Camera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:40:49.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LedController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LedController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\LedController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LedController.cs",
-              "RelativeToolTip": "Parking_Management\\Presentation\\LedController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:48:21.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ControlUnitOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\ControlUnitOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\ControlUnitOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\ControlUnitOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\ControlUnitOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:53.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LaneOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\LaneOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\LaneOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\LaneOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\LaneOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:47:10.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LedOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\LedOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\LedOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\LedOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\LedOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:50:04.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\appsettings.json",
-              "RelativeDocumentMoniker": "Parking_Management\\appsettings.json",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\appsettings.json",
-              "RelativeToolTip": "Parking_Management\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-27T01:34:10.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ComputerOnly.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\ComputerOnly.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Dto\\ComputerOnly.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Dto\\ComputerOnly.cs",
-              "RelativeToolTip": "Parking_Management\\Dto\\ComputerOnly.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:50.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "LaneController.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\LaneController.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\LaneController.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\LaneController.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\LaneController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LaneController.cs",
+              "RelativeDocumentMoniker": "Parking_Management\\Presentation\\LaneController.cs",
+              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Presentation\\LaneController.cs",
+              "RelativeToolTip": "Parking_Management\\Presentation\\LaneController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:21.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LaneCamera.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\LaneCamera.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\LaneCamera.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\LaneCamera.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\LaneCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:17.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Lane.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Lane.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Lane.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Lane.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Lane.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:12.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ExitLog.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ExitLog.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\ExitLog.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ExitLog.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\ExitLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:45:04.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "EntryLog.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\EntryLog.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\EntryLog.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\EntryLog.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\EntryLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:44:58.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Customer.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Customer.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Customer.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:44:54.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Led.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Led.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Led.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Led.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Led.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T01:50:07.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ControlUnit.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ControlUnit.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\ControlUnit.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\ControlUnit.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\ControlUnit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:44:47.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Computer.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Computer.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Computer.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Computer.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Computer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:44:40.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CardGroup.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\CardGroup.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\CardGroup.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\CardGroup.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\CardGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:37:41.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Card.cs",
-              "RelativeDocumentMoniker": "Parking_Management\\Domain\\Entities\\Card.cs",
-              "ToolTip": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Domain\\Entities\\Card.cs",
-              "RelativeToolTip": "Parking_Management\\Domain\\Entities\\Card.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:43:51.525Z",
+              "WhenOpened": "2025-02-27T08:07:13.763Z",
               "EditorCaption": ""
             }
           ]

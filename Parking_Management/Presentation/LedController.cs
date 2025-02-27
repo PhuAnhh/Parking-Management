@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
 using Parking_Management.Domain.Entities;
 using System.Linq;
+using Parking_Management.Domain.Interface;
 
 namespace Parking_Management.Controllers
 {
@@ -10,84 +11,55 @@ namespace Parking_Management.Controllers
     [ApiController]
     public class LedController : ControllerBase
     {
-        private readonly ParkingManagementContext _context;
+        private readonly ILedService _ledService;
 
-        public LedController(ParkingManagementContext context)
+        public LedController(ILedService ledService)
         {
-            _context = context;
+            _ledService = ledService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Led>>> GetAll()
         {
-            return await _context.Leds.ToListAsync();
+            return Ok(await _ledService.GetAll());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Led>> GetById(int id)
         {
-            var led = await _context.Leds.FirstOrDefaultAsync(i => i.Id == id);
+            var led = await _ledService.GetById(id);
 
             if (led == null)
             {
                 return NotFound("Led not found");
             }
 
-            return led;
+            return Ok(led);
         }
 
         [HttpPost]
         public async Task<ActionResult<Led>> CreateGate([FromBody] LedOnly ledOnly)
         {
-            var led = new Led
-            {
-                Name = ledOnly.Name,
-                ComputerId = ledOnly.ComputerId,
-                Type = ledOnly.Type,
-                CreatedAt = DateTime.UtcNow,
-            };
-
-            _context.Leds.Add(led);
-            await _context.SaveChangesAsync();
-
+            var led = await _ledService.Add(ledOnly);
             return CreatedAtAction(nameof(GetById), new { id = led.Id }, led);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] LedOnly led)
+        public async Task<IActionResult> Update(int id, [FromBody] LedOnly ledOnly)
         {
-            if (id != led.Id)
-            {
-                return BadRequest("ID not found");
-            }
-
-            var existingLed = await _context.Leds.FindAsync(id);
-            if (existingLed == null)
-            {
-                return NotFound("Led not found");
-            }
-
-            existingLed.Name = led.Name;
-            existingLed.ComputerId = led.ComputerId;
-            existingLed.Type = led.Type;
-            existingLed.UpdatedAt = DateTime.UtcNow;
-
-            await _context.SaveChangesAsync();
+            await _ledService.Update(id, ledOnly);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var led = await _context.Leds.FirstOrDefaultAsync(i => i.Id == id);
+            var led = await _ledService.GetById(id);
             if (led == null)
             {
                 return NotFound("Led not found");
             }
-
-            _context.Leds.Remove(led);
-            await _context.SaveChangesAsync();
-
+            await _ledService.Delete(id);
             return NoContent();
         }
     }

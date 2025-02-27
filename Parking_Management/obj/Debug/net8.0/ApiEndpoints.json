@@ -85,7 +85,7 @@
         "IsRequired": true
       },
       {
-        "Name": "camera",
+        "Name": "cameraOnly",
         "Type": "Parking_Management.Dto.CameraOnly",
         "IsRequired": true
       }
@@ -109,8 +109,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "GetComputers",
+    "ContainingType": "Parking_Management.Controllers.ComputerController",
+    "Method": "GetAll",
     "RelativePath": "api/Computer",
     "HttpMethod": "GET",
     "IsController": true,
@@ -129,8 +129,8 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "PostComputer",
+    "ContainingType": "Parking_Management.Controllers.ComputerController",
+    "Method": "Create",
     "RelativePath": "api/Computer",
     "HttpMethod": "POST",
     "IsController": true,
@@ -155,8 +155,8 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "GetComputer",
+    "ContainingType": "Parking_Management.Controllers.ComputerController",
+    "Method": "GetById",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -181,8 +181,8 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "PutComputer",
+    "ContainingType": "Parking_Management.Controllers.ComputerController",
+    "Method": "Update",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -194,7 +194,7 @@
         "IsRequired": true
       },
       {
-        "Name": "computer",
+        "Name": "computerOnly",
         "Type": "Parking_Management.Dto.ComputerOnly",
         "IsRequired": true
       }
@@ -202,8 +202,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "DeleteComputer",
+    "ContainingType": "Parking_Management.Controllers.ComputerController",
+    "Method": "Delete",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -521,7 +521,7 @@
         "IsRequired": true
       },
       {
-        "Name": "lane",
+        "Name": "laneOnly",
         "Type": "Parking_Management.Dto.LaneOnly",
         "IsRequired": true
       }
@@ -630,7 +630,7 @@
         "IsRequired": true
       },
       {
-        "Name": "led",
+        "Name": "ledOnly",
         "Type": "Parking_Management.Dto.LedOnly",
         "IsRequired": true
       }

@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Domain.Entities;
+using Parking_Management.Business.Repositories;
+using Parking_Management.Business.Services;
 using System.Linq;
 
 namespace Parking_Management.Controllers
@@ -10,92 +13,53 @@ namespace Parking_Management.Controllers
     [ApiController]
     public class CameraController : ControllerBase
     {
-        private readonly ParkingManagementContext _context;
+        private readonly ICameraService _cameraService;
 
-        public CameraController(ParkingManagementContext context)
+        public CameraController(ICameraService cameraService)
         {
-            _context = context;
+            _cameraService = cameraService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Camera>>> GetAll()
         {
-            return await _context.Cameras.ToListAsync();
+            return Ok(await _cameraService.GetAll());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Camera>> GetById(int id)
         {
-            var camera = await _context.Cameras.FirstOrDefaultAsync(i => i.Id == id);
-
+            var camera = await _cameraService.GetById(id);
             if (camera == null)
             {
                 return NotFound("Camera not found");
             }
-
             return camera;
         }
 
         [HttpPost]
         public async Task<ActionResult<Camera>> Create([FromBody] CameraOnly cameraOnly)
         {
-            var camera = new Camera
-            {
-                Name = cameraOnly.Name,
-                IpAddress = cameraOnly.IpAddress,
-                Resolution = cameraOnly.Resolution,
-                Type = cameraOnly.Resolution,
-                Username = cameraOnly.Username,
-                Password = cameraOnly.Password,
-                ComputerId = cameraOnly.ComputerId,
-                CreatedAt = DateTime.UtcNow,
-            };
-
-            _context.Cameras.Add(camera);
-            await _context.SaveChangesAsync();
-
+            var camera = await _cameraService.Add(cameraOnly);
             return CreatedAtAction(nameof(GetById), new { id = camera.Id }, camera);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] CameraOnly camera)
+        public async Task<IActionResult> Update(int id, [FromBody] CameraOnly cameraOnly)
         {
-            if (id != camera.Id)
-            {
-                return BadRequest("ID not found");
-            }
-
-            var existingCamera = await _context.Cameras.FindAsync(id);
-            if (existingCamera == null)
-            {
-                return NotFound("Camera not found");
-            }
-
-            existingCamera.Name = camera.Name;
-            existingCamera.IpAddress = camera.IpAddress;
-            existingCamera.Resolution = camera.Resolution;
-            existingCamera.Type = camera.Type;
-            existingCamera.Username = camera.Username;
-            existingCamera.Password = camera.Password;
-            existingCamera.ComputerId = camera.ComputerId;
-            existingCamera.UpdatedAt = DateTime.UtcNow;
-
-            await _context.SaveChangesAsync();
+            await _cameraService.Update(id, cameraOnly);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var camera = await _context.Cameras.FirstOrDefaultAsync(i => i.Id == id);
+            var camera = await _cameraService.GetById(id);
             if (camera == null)
             {
                 return NotFound("Camera not found");
             }
-
-            _context.Cameras.Remove(camera);
-            await _context.SaveChangesAsync();
-
+            await _cameraService.Delete(id);
             return NoContent();
         }
     }

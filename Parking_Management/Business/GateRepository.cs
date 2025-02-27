@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Parking_Management.Domain.Entities;
-using Parking_Management.Domain.Interfaces;
-using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 
 namespace Parking_Management.Business.Repositories
 {
@@ -13,7 +12,7 @@ namespace Parking_Management.Business.Repositories
         {
             _context = context;
         }
-        
+
         public async Task<IEnumerable<Gate>> GetAllAsync()
         {
             return await _context.Gates.ToListAsync();

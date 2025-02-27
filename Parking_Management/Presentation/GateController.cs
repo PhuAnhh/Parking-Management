@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Domain.Entities;
 using Parking_Management.Business.Repositories;
 using Parking_Management.Business.Services;
 using System.Linq;
-using Parking_Management.Domain.Interfaces;
 
 namespace Parking_Management.Controllers
 {

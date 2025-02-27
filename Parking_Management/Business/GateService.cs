@@ -1,5 +1,5 @@
 ﻿using Parking_Management.Domain.Entities;
-using Parking_Management.Domain.Interfaces;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Dto;
 
 namespace Parking_Management.Business.Services
@@ -30,6 +30,7 @@ namespace Parking_Management.Business.Services
                 Name = gateOnly.Name,
                 CreatedAt = DateTime.UtcNow,
             };
+
             await _gateRepository.AddAsync(gate);
             return gate;
         }

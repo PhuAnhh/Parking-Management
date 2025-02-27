@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Parking_Management.Business.Repositories;
 using Parking_Management.Business.Services;
 using Parking_Management.Domain.Entities;
-using Parking_Management.Domain.Interfaces;
+using Parking_Management.Domain.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +18,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IGateRepository, GateRepository>();
 builder.Services.AddScoped<IGateService, GateService>();
 
+builder.Services.AddScoped<IComputerRepository, ComputerRepository>();
+builder.Services.AddScoped<IComputerService, ComputerService>();
+
+builder.Services.AddScoped<ICameraRepository, CameraRepository>();
+builder.Services.AddScoped<ICameraService, CameraService>();
 
 var app = builder.Build();
 

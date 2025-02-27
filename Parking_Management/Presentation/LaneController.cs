@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Domain.Entities;
+using Parking_Management.Business.Repositories;
+using Parking_Management.Business.Services;
 using System.Linq;
 
 namespace Parking_Management.Controllers
@@ -10,83 +13,55 @@ namespace Parking_Management.Controllers
     [ApiController]
     public class LaneController : ControllerBase
     {
-        private readonly ParkingManagementContext _context;
+        private readonly ILaneService _laneService;
 
-        public LaneController(ParkingManagementContext context)
+        public LaneController(ILaneService laneService)
         {
-            _context = context;
+            _laneService = laneService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Lane>>> GetAll()
         {
-            return await _context.Lanes.ToListAsync();
+            return Ok(await _laneService.GetAll());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Lane>> GetById(int id)
         {
-            var lane = await _context.Lanes.FirstOrDefaultAsync(i => i.Id == id);
+            var lane = await _laneService.GetById(id);
 
             if (lane == null)
             {
                 return NotFound("Lane not found");
             }
 
-            return lane;
+            return Ok(lane);
         }
 
         [HttpPost]
         public async Task<ActionResult<Lane>> CreateGate([FromBody] LaneOnly laneOnly)
         {
-            var lane = new Lane
-            {
-                Name = laneOnly.Name,
-                Type = laneOnly.Type,
-                ComputerId = laneOnly.ComputerId,
-                CreatedAt = DateTime.UtcNow,
-            };
-
-            _context.Lanes.Add(lane);
-            await _context.SaveChangesAsync();
-
+            var lane = await _laneService.Add(laneOnly);
             return CreatedAtAction(nameof(GetById), new { id = lane.Id }, lane);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateGate(int id, [FromBody] LaneOnly lane)
+        public async Task<IActionResult> UpdateGate(int id, [FromBody] LaneOnly laneOnly)
         {
-            if (id != lane.Id)
-            {
-                return BadRequest("ID not found");
-            }
-
-            var existingLane = await _context.Lanes.FindAsync(id);
-            if (existingLane == null)
-            {
-                return NotFound("Lane not found");
-            }
-
-            existingLane.Name = lane.Name;
-            existingLane.Type = lane.Type;
-            existingLane.ComputerId = lane.ComputerId;
-            existingLane.UpdatedAt = DateTime.UtcNow;
-
-            await _context.SaveChangesAsync();
+            await _laneService.Update(id, laneOnly);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var lane = await _context.Lanes.FirstOrDefaultAsync(i => i.Id == id);
+            var lane = await _laneService.GetById(id);
             if (lane == null)
             {
                 return NotFound("Lane not found");
             }
-
-            _context.Lanes.Remove(lane);
-            await _context.SaveChangesAsync();
+            await _laneService.Delete(id);
 
             return NoContent();
         }

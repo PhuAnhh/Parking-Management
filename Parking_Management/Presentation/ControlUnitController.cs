@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Parking_Management.Dto;
+using Parking_Management.Domain.Interface;
 using Parking_Management.Domain.Entities;
+using Parking_Management.Business.Repositories;
+using Parking_Management.Business.Services;
 using System.Linq;
 
 namespace Parking_Management.Controllers
@@ -10,90 +13,55 @@ namespace Parking_Management.Controllers
     [ApiController]
     public class ControlUnitController : ControllerBase
     {
-        private readonly ParkingManagementContext _context;
+        private readonly IControlUnitService _controlUnitService;
 
-        public ControlUnitController(ParkingManagementContext context)
+        public ControlUnitController(IControlUnitService controlUnitService)
         {
-            _context = context;
+            _controlUnitService = controlUnitService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ControlUnit>>> GetAll()
         {
-            return await _context.ControlUnits.ToListAsync();
+            return Ok(await _controlUnitService.GetAll());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ControlUnit>> GetById(int id)
         {
-            var control_unit = await _context.ControlUnits.FirstOrDefaultAsync(i => i.Id == id);
+            var controlUnit = await _controlUnitService.GetById(id);
 
-            if (control_unit == null)
+            if (controlUnit == null)
             {
                 return NotFound("ControlUnit not found");
             }
 
-            return control_unit;
+            return Ok(controlUnit);
         }
 
         [HttpPost]
         public async Task<ActionResult<ControlUnit>> Create([FromBody] ControlUnitOnly controlUnitOnly)
         {
-            var control_unit = new ControlUnit
-            {
-                Name = controlUnitOnly.Name,
-                Username = controlUnitOnly.Username,
-                Password = controlUnitOnly.Password,
-                Type = controlUnitOnly.Type,
-                ConnectionProtocol = controlUnitOnly.ConnectionProtocol,
-                ComputerId = controlUnitOnly.ComputerId,
-                CreatedAt = DateTime.UtcNow,
-            };
-
-            _context.ControlUnits.Add(control_unit);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetById), new { id = control_unit.Id }, control_unit);
+            var controlUnit = await _controlUnitService.Add(controlUnitOnly);
+            return CreatedAtAction(nameof(GetById), new { id = controlUnit.Id }, controlUnit);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] ControlUnitOnly controlUnitOnly)
         {
-            if (id != controlUnitOnly.Id)
-            {
-                return BadRequest("ID not found");
-            }
-
-            var existingControlUnit = await _context.ControlUnits.FindAsync(id);
-            if (existingControlUnit == null)
-            {
-                return NotFound("ControlUnit not found");
-            }
-
-            existingControlUnit.Name = controlUnitOnly.Name;
-            existingControlUnit.Username = controlUnitOnly.Username;
-            existingControlUnit.Password = controlUnitOnly.Password;
-            existingControlUnit.Type = controlUnitOnly.Type;
-            existingControlUnit.ConnectionProtocol = controlUnitOnly.ConnectionProtocol;
-            existingControlUnit.ComputerId = controlUnitOnly.ComputerId;
-            existingControlUnit.UpdatedAt = DateTime.UtcNow;
-
-            await _context.SaveChangesAsync();
+            await _controlUnitService.Update(id, controlUnitOnly);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var control_unit = await _context.ControlUnits.FirstOrDefaultAsync(i => i.Id == id);
-            if (control_unit == null)
+            var controlUnit = await _controlUnitService.GetById(id);
+            if (controlUnit == null)
             {
                 return NotFound("ControlUnit not found");
             }
-
-            _context.ControlUnits.Remove(control_unit);
-            await _context.SaveChangesAsync();
-
+            await _controlUnitService.Delete(id);
             return NoContent();
         }
     }
