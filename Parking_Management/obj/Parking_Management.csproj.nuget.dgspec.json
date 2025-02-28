@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phanp\\source\\repos\\Parking_Management\\Parking_Management\\Parking_Management.csproj": {}
+    "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phanp\\source\\repos\\Parking_Management\\Parking_Management\\Parking_Management.csproj": {
+    "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phanp\\source\\repos\\Parking_Management\\Parking_Management\\Parking_Management.csproj",
+        "projectUniqueName": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj",
         "projectName": "Parking_Management",
-        "projectPath": "C:\\Users\\phanp\\source\\repos\\Parking_Management\\Parking_Management\\Parking_Management.csproj",
+        "projectPath": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\Parking_Management.csproj",
         "packagesPath": "C:\\Users\\phanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phanp\\source\\repos\\Parking_Management\\Parking_Management\\obj\\",
+        "outputPath": "C:\\Users\\phanp\\OneDrive\\Documents\\GitHub\\Parking-Management\\Parking_Management\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
