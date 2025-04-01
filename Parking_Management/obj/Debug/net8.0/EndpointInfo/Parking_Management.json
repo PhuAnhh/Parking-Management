@@ -5,6 +5,78 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Camera": {
       "get": {
         "tags": [
@@ -18,7 +90,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Camera"
+                    "$ref": "#/components/schemas/CameraDto"
                   }
                 }
               },
@@ -26,7 +98,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Camera"
+                    "$ref": "#/components/schemas/CameraDto"
                   }
                 }
               },
@@ -34,7 +106,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Camera"
+                    "$ref": "#/components/schemas/CameraDto"
                   }
                 }
               }
@@ -48,19 +120,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCameraDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/CreateCameraDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/CreateCameraDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/CreateCameraDto"
               }
             }
           }
@@ -71,17 +148,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               }
             }
@@ -111,17 +188,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Camera"
+                  "$ref": "#/components/schemas/CameraDto"
                 }
               }
             }
@@ -145,26 +222,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCameraDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/UpdateCameraDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/UpdateCameraDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CameraOnly"
+                "$ref": "#/components/schemas/UpdateCameraDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CameraDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CameraDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CameraDto"
+                }
+              }
+            }
           }
         }
       },
@@ -203,7 +302,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Computer"
+                    "$ref": "#/components/schemas/ComputerDto"
                   }
                 }
               },
@@ -211,7 +310,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Computer"
+                    "$ref": "#/components/schemas/ComputerDto"
                   }
                 }
               },
@@ -219,7 +318,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Computer"
+                    "$ref": "#/components/schemas/ComputerDto"
                   }
                 }
               }
@@ -233,19 +332,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateComputerDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/CreateComputerDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/CreateComputerDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/CreateComputerDto"
               }
             }
           }
@@ -256,17 +360,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               }
             }
@@ -296,17 +400,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Computer"
+                  "$ref": "#/components/schemas/ComputerDto"
                 }
               }
             }
@@ -330,26 +434,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateComputerDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/UpdateComputerDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/UpdateComputerDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ComputerOnly"
+                "$ref": "#/components/schemas/UpdateComputerDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputerDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputerDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputerDto"
+                }
+              }
+            }
           }
         }
       },
@@ -388,7 +514,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ControlUnit"
+                    "$ref": "#/components/schemas/ControlUnitDto"
                   }
                 }
               },
@@ -396,7 +522,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ControlUnit"
+                    "$ref": "#/components/schemas/ControlUnitDto"
                   }
                 }
               },
@@ -404,7 +530,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ControlUnit"
+                    "$ref": "#/components/schemas/ControlUnitDto"
                   }
                 }
               }
@@ -418,19 +544,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateControlUnitDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/CreateControlUnitDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/CreateControlUnitDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/CreateControlUnitDto"
               }
             }
           }
@@ -441,17 +572,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               }
             }
@@ -481,17 +612,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ControlUnit"
+                  "$ref": "#/components/schemas/ControlUnitDto"
                 }
               }
             }
@@ -515,26 +646,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateControlUnitDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/UpdateControlUnitDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/UpdateControlUnitDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ControlUnitOnly"
+                "$ref": "#/components/schemas/UpdateControlUnitDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ControlUnitDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ControlUnitDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ControlUnitDto"
+                }
+              }
+            }
           }
         }
       },
@@ -573,7 +726,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Gate"
+                    "$ref": "#/components/schemas/GateDto"
                   }
                 }
               },
@@ -581,7 +734,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Gate"
+                    "$ref": "#/components/schemas/GateDto"
                   }
                 }
               },
@@ -589,7 +742,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Gate"
+                    "$ref": "#/components/schemas/GateDto"
                   }
                 }
               }
@@ -603,19 +756,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGateDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/CreateGateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/CreateGateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/CreateGateDto"
               }
             }
           }
@@ -626,17 +784,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               }
             }
@@ -666,17 +824,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Gate"
+                  "$ref": "#/components/schemas/GateDto"
                 }
               }
             }
@@ -700,26 +858,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGateDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/UpdateGateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/UpdateGateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GateOnly"
+                "$ref": "#/components/schemas/UpdateGateDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GateDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GateDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GateDto"
+                }
+              }
+            }
           }
         }
       },
@@ -758,7 +938,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Lane"
+                    "$ref": "#/components/schemas/LaneDto"
                   }
                 }
               },
@@ -766,7 +946,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Lane"
+                    "$ref": "#/components/schemas/LaneDto"
                   }
                 }
               },
@@ -774,7 +954,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Lane"
+                    "$ref": "#/components/schemas/LaneDto"
                   }
                 }
               }
@@ -788,19 +968,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLaneDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/CreateLaneDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/CreateLaneDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/CreateLaneDto"
               }
             }
           }
@@ -811,17 +996,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               }
             }
@@ -851,17 +1036,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lane"
+                  "$ref": "#/components/schemas/LaneDto"
                 }
               }
             }
@@ -885,26 +1070,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLaneDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/UpdateLaneDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/UpdateLaneDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LaneOnly"
+                "$ref": "#/components/schemas/UpdateLaneDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaneDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaneDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaneDto"
+                }
+              }
+            }
           }
         }
       },
@@ -943,7 +1150,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Led"
+                    "$ref": "#/components/schemas/LedDto"
                   }
                 }
               },
@@ -951,7 +1158,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Led"
+                    "$ref": "#/components/schemas/LedDto"
                   }
                 }
               },
@@ -959,7 +1166,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Led"
+                    "$ref": "#/components/schemas/LedDto"
                   }
                 }
               }
@@ -973,19 +1180,24 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLedDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/CreateLedDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/CreateLedDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/CreateLedDto"
               }
             }
           }
@@ -996,17 +1208,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               }
             }
@@ -1036,17 +1248,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Led"
+                  "$ref": "#/components/schemas/LedDto"
                 }
               }
             }
@@ -1070,26 +1282,48 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLedDto"
+              }
+            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/UpdateLedDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/UpdateLedDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LedOnly"
+                "$ref": "#/components/schemas/UpdateLedDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LedDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LedDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LedDto"
+                }
+              }
+            }
           }
         }
       },
@@ -1118,64 +1352,7 @@
   },
   "components": {
     "schemas": {
-      "Camera": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "ipAddress": {
-            "type": "string",
-            "nullable": true
-          },
-          "resolution": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "computerId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "computer": {
-            "$ref": "#/components/schemas/Computer"
-          },
-          "laneCameras": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LaneCamera"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CameraOnly": {
+      "CameraDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1222,69 +1399,7 @@
         },
         "additionalProperties": false
       },
-      "Computer": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "ipAddress": {
-            "type": "string",
-            "nullable": true
-          },
-          "gateId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "cameras": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Camera"
-            },
-            "nullable": true
-          },
-          "controlUnits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ControlUnit"
-            },
-            "nullable": true
-          },
-          "gate": {
-            "$ref": "#/components/schemas/Gate"
-          },
-          "lanes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Lane"
-            },
-            "nullable": true
-          },
-          "leds": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Led"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ComputerOnly": {
+      "ComputerDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1315,60 +1430,7 @@
         },
         "additionalProperties": false
       },
-      "ControlUnit": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "connectionProtocol": {
-            "type": "string",
-            "nullable": true
-          },
-          "computerId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "computer": {
-            "$ref": "#/components/schemas/Computer"
-          },
-          "laneControllers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LaneController"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ControlUnitOnly": {
+      "ControlUnitDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1411,66 +1473,101 @@
         },
         "additionalProperties": false
       },
-      "Gate": {
+      "CreateCameraDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
           },
-          "createdAt": {
+          "ipAddress": {
             "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           },
-          "computers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Computer"
-            },
+          "resolution": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateComputerDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "ipAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "gateId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateControlUnitDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "connectionProtocol": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateGateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "GateOnly": {
+      "CreateLaneDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Lane": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -1482,93 +1579,36 @@
           "computerId": {
             "type": "integer",
             "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "computer": {
-            "$ref": "#/components/schemas/Computer"
-          },
-          "laneCameras": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LaneCamera"
-            },
-            "nullable": true
-          },
-          "laneControllers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LaneController"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "LaneCamera": {
+      "CreateLedDto": {
         "type": "object",
         "properties": {
-          "laneId": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
             "type": "integer",
             "format": "int32"
           },
-          "cameraId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "purpose": {
+          "type": {
             "type": "string",
             "nullable": true
-          },
-          "cameraType": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "camera": {
-            "$ref": "#/components/schemas/Camera"
-          },
-          "lane": {
-            "$ref": "#/components/schemas/Lane"
           }
         },
         "additionalProperties": false
       },
-      "LaneController": {
+      "GateDto": {
         "type": "object",
         "properties": {
-          "laneId": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "controlUnitId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "input": {
-            "type": "string",
-            "nullable": true
-          },
-          "barrier": {
-            "type": "string",
-            "nullable": true
-          },
-          "alarm": {
+          "name": {
             "type": "string",
             "nullable": true
           },
@@ -1580,17 +1620,11 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "controlUnit": {
-            "$ref": "#/components/schemas/ControlUnit"
-          },
-          "lane": {
-            "$ref": "#/components/schemas/Lane"
           }
         },
         "additionalProperties": false
       },
-      "LaneOnly": {
+      "LaneDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1621,7 +1655,7 @@
         },
         "additionalProperties": false
       },
-      "Led": {
+      "LedDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1648,20 +1682,155 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "computer": {
-            "$ref": "#/components/schemas/Computer"
           }
         },
         "additionalProperties": false
       },
-      "LedOnly": {
+      "Login": {
         "type": "object",
         "properties": {
-          "id": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Register": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCameraDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "ipAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "resolution": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateComputerDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
           },
+          "ipAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "gateId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateControlUnitDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "connectionProtocol": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateGateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateLaneDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "computerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateLedDto": {
+        "type": "object",
+        "properties": {
           "name": {
             "type": "string",
             "nullable": true
@@ -1672,15 +1841,6 @@
           },
           "type": {
             "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           }
         },

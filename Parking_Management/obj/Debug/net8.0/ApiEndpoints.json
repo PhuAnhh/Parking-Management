@@ -1,6 +1,38 @@
 [
   {
-    "ContainingType": "Parking_Management.Controllers.CameraController",
+    "ContainingType": "Parking_Management.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Parking_Management.Parking.Application.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parking_Management.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Parking_Management.Parking.Application.Models.Register",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.CameraController",
     "Method": "GetAll",
     "RelativePath": "api/Camera",
     "HttpMethod": "GET",
@@ -9,7 +41,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Camera, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.CameraDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -20,7 +52,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.CameraController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.CameraController",
     "Method": "Create",
     "RelativePath": "api/Camera",
     "HttpMethod": "POST",
@@ -28,14 +60,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cameraOnly",
-        "Type": "Parking_Management.Dto.CameraOnly",
+        "Name": "createCameraDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateCameraDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Camera",
+        "Type": "Parking_Management.Parking.Application.Models.CameraDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +78,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.CameraController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.CameraController",
     "Method": "GetById",
     "RelativePath": "api/Camera/{id}",
     "HttpMethod": "GET",
@@ -61,7 +93,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Camera",
+        "Type": "Parking_Management.Parking.Application.Models.CameraDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -72,7 +104,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.CameraController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.CameraController",
     "Method": "Update",
     "RelativePath": "api/Camera/{id}",
     "HttpMethod": "PUT",
@@ -85,15 +117,25 @@
         "IsRequired": true
       },
       {
-        "Name": "camera",
-        "Type": "Parking_Management.Dto.CameraOnly",
+        "Name": "updateCameraDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateCameraDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.CameraDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.CameraController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.CameraController",
     "Method": "Delete",
     "RelativePath": "api/Camera/{id}",
     "HttpMethod": "DELETE",
@@ -109,8 +151,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "GetComputers",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ComputerController",
+    "Method": "GetAll",
     "RelativePath": "api/Computer",
     "HttpMethod": "GET",
     "IsController": true,
@@ -118,7 +160,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Computer, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.ComputerDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -129,22 +171,22 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "PostComputer",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ComputerController",
+    "Method": "Create",
     "RelativePath": "api/Computer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "computerOnly",
-        "Type": "Parking_Management.Dto.ComputerOnly",
+        "Name": "createComputerDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateComputerDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Computer",
+        "Type": "Parking_Management.Parking.Application.Models.ComputerDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -155,8 +197,8 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "GetComputer",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ComputerController",
+    "Method": "GetById",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -170,7 +212,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Computer",
+        "Type": "Parking_Management.Parking.Application.Models.ComputerDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -181,8 +223,8 @@
     ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "PutComputer",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ComputerController",
+    "Method": "Update",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -194,16 +236,26 @@
         "IsRequired": true
       },
       {
-        "Name": "computer",
-        "Type": "Parking_Management.Dto.ComputerOnly",
+        "Name": "updateComputerDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateComputerDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.ComputerDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "ComputerController",
-    "Method": "DeleteComputer",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ComputerController",
+    "Method": "Delete",
     "RelativePath": "api/Computer/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -218,7 +270,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Parking_Management.Controllers.ControlUnitController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ControlUnitController",
     "Method": "GetAll",
     "RelativePath": "api/ControlUnit",
     "HttpMethod": "GET",
@@ -227,7 +279,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.ControlUnit, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.ControlUnitDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -238,7 +290,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.ControlUnitController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ControlUnitController",
     "Method": "Create",
     "RelativePath": "api/ControlUnit",
     "HttpMethod": "POST",
@@ -246,14 +298,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "controlUnitOnly",
-        "Type": "Parking_Management.Models.ControlUnitOnly",
+        "Name": "createControlUnitDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateControlUnitDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.ControlUnit",
+        "Type": "Parking_Management.Parking.Application.Models.ControlUnitDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -264,7 +316,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.ControlUnitController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ControlUnitController",
     "Method": "GetById",
     "RelativePath": "api/ControlUnit/{id}",
     "HttpMethod": "GET",
@@ -279,7 +331,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.ControlUnit",
+        "Type": "Parking_Management.Parking.Application.Models.ControlUnitDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -290,7 +342,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.ControlUnitController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ControlUnitController",
     "Method": "Update",
     "RelativePath": "api/ControlUnit/{id}",
     "HttpMethod": "PUT",
@@ -303,15 +355,25 @@
         "IsRequired": true
       },
       {
-        "Name": "controlUnitOnly",
-        "Type": "Parking_Management.Models.ControlUnitOnly",
+        "Name": "updateControlUnitDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateControlUnitDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.ControlUnitDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.ControlUnitController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.ControlUnitController",
     "Method": "Delete",
     "RelativePath": "api/ControlUnit/{id}",
     "HttpMethod": "DELETE",
@@ -327,8 +389,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "GetAllGates",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.GateController",
+    "Method": "GetAll",
     "RelativePath": "api/Gate",
     "HttpMethod": "GET",
     "IsController": true,
@@ -336,7 +398,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Gate, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.GateDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -347,22 +409,22 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "CreateGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.GateController",
+    "Method": "Create",
     "RelativePath": "api/Gate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "gateOnly",
-        "Type": "Parking_Management.Dto.GateOnly",
+        "Name": "createGateDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateGateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Gate",
+        "Type": "Parking_Management.Parking.Application.Models.GateDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -373,8 +435,8 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "GetGateById",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.GateController",
+    "Method": "GetById",
     "RelativePath": "api/Gate/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -388,7 +450,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Gate",
+        "Type": "Parking_Management.Parking.Application.Models.GateDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -399,8 +461,8 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "UpdateGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.GateController",
+    "Method": "Update",
     "RelativePath": "api/Gate/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -412,16 +474,26 @@
         "IsRequired": true
       },
       {
-        "Name": "gate",
-        "Type": "Parking_Management.Dto.GateOnly",
+        "Name": "updateGateDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateGateDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.GateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.GateController",
-    "Method": "DeleteGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.GateController",
+    "Method": "Delete",
     "RelativePath": "api/Gate/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -436,7 +508,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LaneController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LaneController",
     "Method": "GetAll",
     "RelativePath": "api/Lane",
     "HttpMethod": "GET",
@@ -445,7 +517,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Lane, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.LaneDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -456,22 +528,22 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LaneController",
-    "Method": "CreateGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LaneController",
+    "Method": "Create",
     "RelativePath": "api/Lane",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "laneOnly",
-        "Type": "Parking_Management.Models.LaneOnly",
+        "Name": "createLaneDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateLaneDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Lane",
+        "Type": "Parking_Management.Parking.Application.Models.LaneDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -482,7 +554,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LaneController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LaneController",
     "Method": "GetById",
     "RelativePath": "api/Lane/{id}",
     "HttpMethod": "GET",
@@ -497,7 +569,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Lane",
+        "Type": "Parking_Management.Parking.Application.Models.LaneDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -508,8 +580,8 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LaneController",
-    "Method": "UpdateGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LaneController",
+    "Method": "Update",
     "RelativePath": "api/Lane/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -521,15 +593,25 @@
         "IsRequired": true
       },
       {
-        "Name": "lane",
-        "Type": "Parking_Management.Models.LaneOnly",
+        "Name": "updateLaneDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateLaneDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.LaneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LaneController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LaneController",
     "Method": "Delete",
     "RelativePath": "api/Lane/{id}",
     "HttpMethod": "DELETE",
@@ -545,7 +627,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LedController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LedController",
     "Method": "GetAll",
     "RelativePath": "api/Led",
     "HttpMethod": "GET",
@@ -554,7 +636,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Models.Led, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Parking_Management.Parking.Application.Models.LedDto, Parking_Management, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -565,22 +647,22 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LedController",
-    "Method": "CreateGate",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LedController",
+    "Method": "Create",
     "RelativePath": "api/Led",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ledOnly",
-        "Type": "Parking_Management.Models.LedOnly",
+        "Name": "createLedDto",
+        "Type": "Parking_Management.Parking.Application.Models.CreateLedDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Led",
+        "Type": "Parking_Management.Parking.Application.Models.LedDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -591,7 +673,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LedController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LedController",
     "Method": "GetById",
     "RelativePath": "api/Led/{id}",
     "HttpMethod": "GET",
@@ -606,7 +688,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Parking_Management.Models.Led",
+        "Type": "Parking_Management.Parking.Application.Models.LedDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -617,7 +699,7 @@
     ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LedController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LedController",
     "Method": "Update",
     "RelativePath": "api/Led/{id}",
     "HttpMethod": "PUT",
@@ -630,15 +712,25 @@
         "IsRequired": true
       },
       {
-        "Name": "led",
-        "Type": "Parking_Management.Models.LedOnly",
+        "Name": "updateLedDto",
+        "Type": "Parking_Management.Parking.Application.Models.UpdateLedDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Parking_Management.Parking.Application.Models.LedDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "Parking_Management.Controllers.LedController",
+    "ContainingType": "Parking_Management.Parking.Api.Controllers.LedController",
     "Method": "Delete",
     "RelativePath": "api/Led/{id}",
     "HttpMethod": "DELETE",
